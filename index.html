@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            .main{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .hh{
+                text-align: center;
+                text-decoration: underline;
+                margin-top: 20px;
+                color: white;
+                
+            }
+            .w-100{
+                width: 100%;
+            }
+            .wd1{
+                width: 400px;
+                height: 310px;
+                margin: auto;
+                margin-top: 20px;
+                border: 2px solid black;
+                border-radius: 5px;
+                background-color: grey;
+                box-shadow: 8px  8px 8px rgb(167, 168, 166);
+            }
+            .display{
+                display: block;
+                margin: 15px auto;
+                width: 350px;
+                padding: 15px;
+                border-radius: 10px;
+            }
+            .btn{
+                display: inline-block;
+                margin: auto;
+                margin: 2px;
+                padding: 2px; 
+                margin-left: 20px;
+                width: 50px;
+                height:50px;
+                font-size: 18px;
+                font-weight: 600;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .cl{
+                background-color: rgb(158, 8, 8);
+                color: white;
+                width: 20%;
+
+            }
+            .btn:hover{
+                background-color: black;
+                color:white;
+            }
+            .dd{
+                width: 63%;
+            }
+            .img{
+                background: url(Postcalc.png);
+                background-repeat:no-repeat ;
+                background-size: cover;
+            }
+
+        </style>
+    </head>
+<body class="img" >
+    <div class="main w-100">
+        <div class="hh w-100 " ><h1>Calculator</h1></div>
+        <div class="wd1">
+        <form name="calculator">
+            <input class="display" type="text" name="display" id="display" placeholder="Enter Your Digit" readonly> 
+            <input class="btn" type="button" value="." onclick="calculator.display.value += '.'">
+            <input class="btn" type="button" value="/" onclick="calculator.display.value += ' / '">   
+            <input class="btn" type="button" value="x" onclick="calculator.display.value += ' * '">
+			<input class=" btn" type="button" value="-" onclick="calculator.display.value += '-'">
+			<input class=" btn" type="button" value="+" onclick="calculator.display.value += '+'">
+            <input class=" btn" type="button" value="9" onclick="calculator.display.value += '9'">
+            <input class="btn" type="button" value="8" onclick="calculator.display.value += '8'">
+            <input class="btn" type="button" value="7" onclick="calculator.display.value += '7'">
+            <input class="btn" type="button" value="6" onclick="calculator.display.value += '6'">
+            <input class="btn" type="button" value="5" onclick="calculator.display.value += '5'">
+			<input class="btn" type="button" value="4" onclick="calculator.display.value += '4'">
+			<input class="btn" type="button" value="3" onclick="calculator.display.value += '3'">
+            <input class="btn" type="button" value="2" onclick="calculator.display.value += '2'">
+			<input class="btn" type="button" value="1" onclick="calculator.display.value += '1'">
+            <input class="btn" type="button" value="0" onclick="calculator.display.value += '0'">
+            <input id="clearButton" class="btn cl" type="button" value="Clear" onclick="calculator.display.value = ''"> 
+			<input class="btn cl dd" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">           
+        </form>
+    </div>
+
+    </div>
+    <script>
+
+    </script>
+
+
+</body>    
+</html>
